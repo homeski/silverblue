@@ -9,7 +9,7 @@ kargs = [
   "modprobe.blacklist=nouveau,nova_core",
   "rhgb",
   "quiet",
-  "root=UUID=e042907b-dfa6-4fee-b2d5-3be38e7ced8c",
+  "root=UUID=cf118247-a944-4c2e-beb6-bfcdf41e4590",
   "vconsole.keymap=us",
   "rootflags=subvol=root",
   "rw"
