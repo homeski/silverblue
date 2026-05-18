@@ -1,0 +1,5 @@
+- ansible-playbook
+- oh-my-zsh
+- tmux
+- vim
+- zsh
