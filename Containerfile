@@ -1,5 +1,5 @@
 # Silverblue
-FROM ghcr.io/ublue-os/kinoite-nvidia:latest
+FROM ghcr.io/ublue-os/kinoite-nvidia:44
 
 # Kernel arguments
 RUN mkdir -p /usr/lib/bootc/kargs.d
@@ -23,6 +23,10 @@ context.properties = {
   module.raop = false
 }
 EOF
+
+# Ghostty
+COPY scottames-ghostty-fedora-44.repo /etc/yum.repos.d/_copr:copr.fedorainfracloud.org:scottames:ghostty.repo
+RUN dnf -y install ghostty
 
 # Linting
 RUN bootc container lint
