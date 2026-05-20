@@ -25,7 +25,7 @@ context.properties = {
 EOF
 
 # Ghostty
-COPY scottames-ghostty-fedora-44.repo /etc/yum.repos.d/_copr:copr.fedorainfracloud.org:scottames:ghostty.repo
+COPY repos/scottames-ghostty-fedora-44.repo /etc/yum.repos.d/_copr:copr.fedorainfracloud.org:scottames:ghostty.repo
 RUN dnf -y install ghostty
 
 # Linting

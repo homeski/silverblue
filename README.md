@@ -1,3 +1,17 @@
+# Build the image
+
+```sh
+scripts/build.sh
+```
+
+# Deploy the image
+
+```sh
+scripts/deploy.sh
+```
+
+# Other
+
 ```sh
 # Show deployments
 rpm-ostree status
@@ -7,9 +21,6 @@ ostree admin undeploy 0
 
 # Unpin deployment
 ostree admin pin --unpin <id>
-
-# Create deployment from local Podman image
-bootc switch --transport=containers-storage localhost/<name>:<tag>
 
 # Create fresh deployment from loaded image
 # Resets /etc and /var to empty
