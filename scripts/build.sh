@@ -1,3 +1,3 @@
 #!/bin/bash
 
-podman build . -t silverblue:$(date +%y%m%d%M)
+podman build . -t silverblue:$(date +%y%m%d)

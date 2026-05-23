@@ -1,12 +1,14 @@
 # Silverblue
-FROM ghcr.io/ublue-os/kinoite-nvidia:44
+FROM ghcr.io/wayblueorg/sway-nvidia-gdm:latest
 
 # Kernel arguments
 RUN mkdir -p /usr/lib/bootc/kargs.d
 RUN cat <<EOF >> /usr/lib/bootc/kargs.d/00-nvidia.toml
 kargs = [
-  "rd.driver.blacklist=nouveau,nova_core",
-  "modprobe.blacklist=nouveau,nova_core",
+  "rd.driver.blacklist=nouveau",
+  "modprobe.blacklist=nouveau",
+  "nvidia-drm.modeset=1",
+  "nvidia-drm.fbdev=1",
   "rhgb",
   "quiet",
   "root=UUID=cf118247-a944-4c2e-beb6-bfcdf41e4590",
@@ -26,7 +28,7 @@ EOF
 
 # RPMs
 COPY repos/scottames-ghostty-fedora-44.repo /etc/yum.repos.d/_copr:copr.fedorainfracloud.org:scottames:ghostty.repo
-RUN dnf -y install ghostty vim zsh
+RUN dnf -y install ghostty tmux vim zsh
 
 # Linting
 RUN bootc container lint
