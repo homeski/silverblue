@@ -1,4 +1,0 @@
-- ansible
-- oh-my-zsh
-- vim
-- zsh

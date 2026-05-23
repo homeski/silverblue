@@ -1,17 +1,14 @@
 # Build the image
-
 ```sh
 scripts/build.sh
 ```
 
 # Deploy the image
-
 ```sh
 scripts/deploy.sh
 ```
 
 # Other
-
 ```sh
 # Show deployments
 rpm-ostree status

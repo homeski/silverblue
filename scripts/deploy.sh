@@ -1,3 +1,3 @@
 #!/bin/bash
 
-bootc switch --transport=containers-storage localhost/silverblue:latest --enforce-container-sigpolicy
+bootc switch --transport=containers-storage localhost/silverblue:$(date +%y%m%d%M) --enforce-container-sigpolicy
