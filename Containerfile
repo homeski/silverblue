@@ -1,5 +1,5 @@
 # Silverblue
-FROM ghcr.io/wayblueorg/sway-nvidia-gdm:43
+FROM ghcr.io/wayblueorg/sway-nvidia-gdm:44
 
 # Kernel arguments
 RUN mkdir -p /usr/lib/bootc/kargs.d
