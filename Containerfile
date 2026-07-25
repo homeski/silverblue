@@ -28,7 +28,7 @@ EOF
 
 # RPMs
 COPY repos/scottames-ghostty-fedora-44.repo /etc/yum.repos.d/_copr:copr.fedorainfracloud.org:scottames:ghostty.repo
-RUN dnf -y install ghostty podman-compose tmux vim zsh
+RUN dnf -y install bat ghostty podman-compose tmux vim zsh
 
 # Linting
 RUN bootc container lint
